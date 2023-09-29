@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+        <div class="container-fluid">
+
+          <img src="imagens/logo_flamengo.png" alt="logo" height="110px">
+    
+          <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="html_fla.html" id="i1">Home</a>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link" href="elenco.html" id="i2">Elenco</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="i3">Equipe Técnica</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="i4">Loja Oficial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="i5">Sócio Torcedor</a>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="pesquisar" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+
+        <h2>Adicionar Jogador</h2>
+    <form id="playerForm" class="mb-5">
+        <div class="form-group">
+            <input type="text" id="playerName" class="form-control" placeholder="Nome do Jogador" required>
+        </div>
+        <div class="form-group">
+            <input type="number" id="playerAge" class="form-control" placeholder="Idade" required>
+        </div>
+        <div class="form-group">
+            <input type="file" id="playerImage" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+    </form>
+
+    <h2>Jogadores do Time</h2>
+    <ul id="playerList" class="list-group"></ul>
+
+    <!-- SDKs Firebase e Bootstrap -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="elenco.js"></script>
+</body>
+</html>
